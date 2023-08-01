@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HomePage</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <style>
+    a{
+        text-decoration: none;
+        color: white;
+        transition: color 0.15s;
+        width: 60px;
+    }
+      body {
+    font-size: 20px;
+    font-family: sans-serif;
+    background-image: url(imgs/background.jpg);
+    color: white;
+    text-shadow: 5px 3px 5px 3px black;
+    
+}
+td{
+    
+    border-bottom: 5px solid black;
+    padding: 7px;
+    margin: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 60px;
+    text-align: center;
+    transition: background-color 0.15s;
+    transition: border-bottom 0.15s;
+    
+    
+}
+a:active{
+   
+}
+td:active{
+    border-bottom: 5px solid white;
+    background-color: ghostwhite;
+    color: black; 
+}
+  </style>
+</head>
+
+<body>
+    
+    <center>
+        <h1>HomePage</h1>
+    <table>
+    <tr>
+        
+        <td data-href="https://t.me/vid" id="YouTube">
+            YouTube
+        </td>
+        <td data-href="https://m.facebook.com/" id="FaceBook">
+        FaceBook
+        </td>
+        <td data-href="https://itch.io/" id="Itch">
+            Itch
+        </td>
+    </tr>
+    <tr>
+        <td data-href="https://stackoverflow.com/" id="StackOverflow">
+            StackOverflow
+        </td>
+        <td data-href="https://github.com/" id="GitHub">
+            GitHub
+        </td>
+        <td data-href="https://chat.openai.com/" id="ChatGpt">
+            ChatGpt
+        </td>
+    </tr>
+    <tr>
+        <td data-href="https://www.w3schools.com/html/" id="Html">
+            Html
+        </td>
+        <td data-href="https://css-tricks.com/" id="Css">
+            Css
+        </td>
+        <td data-href="https://devdocs.io/" id="JavaScript">
+            JavaScript
+        </td>
+    </tr>
+    <tr>
+        <td data-href="https://flask.palletsprojects.com/en/2.3.x/" id="Flask">
+            Flask
+        </td>
+        <td data-href="https://docs.djangoproject.com/en/4.2/" id="Django">
+            Django
+        </td>
+        <td data-href="https://kivy.org/doc/stable/" id="Kivy">
+        Kivy
+        </td>
+    </tr>
+    <tr>
+        <td data-href="https://nodejs.org/en/docs" id="NodeJs">
+            NodeJs
+        </td>
+        <td data-href="https://legacy.reactjs.org/docs/getting-started.html" id="React">
+           React
+        </td>
+        <td data-href="https://vuejs.org/guide/introduction.html" id="Vue">
+            Vue
+        </td>
+    </tr>
+    </table>
+    </center>
+    <script>
+    document.addEventListener("DOMContentLoaded",()=>{
+            const link=document.querySelectorAll("td[data-href]");
+            link.forEach(link=>{
+                link.addEventListener("click",()=>{
+                    window.location.href=link.dataset.href
+                })
+            })
+            })
+    </script>
+</body>
+</html>
